@@ -1,0 +1,51 @@
+﻿Student_ID,Name,Email,Phone,Course,Fee_Paid,City,Enrolled_Date,Email_Valid,Phone_Valid,Date_Valid,Duplicate_ID,Data_Status,Validation_Issues
+STU1001,Manoj K,manojk@gmail,9876543210,Python,True,Chennai,23-05-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1002,Priya S,priya.s@yahoo.com,98765,Machine Learning,False,Coimbatore,06-05-2025,True,False,False,False,Needs Review,Invalid phone; Invalid enrollment date
+STU1003,Ravi Kumar,ravikumar@,9123456789,Python,True,Madurai,19-02-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1004,Anitha R,anitha@gmail.com,9000011111,Ml,False,Chennai,05-04-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1005,Karthik,karthik123,,Python,True,,08-02-2025,False,False,False,False,Needs Review,Missing required field; Invalid email; Invalid phone; Invalid enrollment date
+STU1006,Deepa M,deepam@gmail.com,8123456789,Data Science,True,Salem,09-03-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1007,Suresh T,suresht@,7654321098,Python,False,Trichy,14-01-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1008,Kavitha,kavitha99@gmail.com,9988776655,Machine Learning,True,Chennai,15-01-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1009,Rajesh Kk,rajeshkk@gmail,8877665544,Python,True,Coimbatore,15-05-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1010,Nithya R,nithyar@yahoo.com,9765432109,Data Science,False,Madurai,25-04-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1011,Arun P,arunp@gmail.com,7788990011,Python,True,Chennai,17-06-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1012,Meena D,meenad@,,Ml,True,Salem,21-02-2025,False,False,False,False,Needs Review,Missing required field; Invalid email; Invalid phone; Invalid enrollment date
+STU1013,Santhosh V,santhoshv@gmail.com,9900112233,Python,False,Trichy,26-01-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1014,Lakshmi,lakshmi@gmail,8811223344,Data Science,True,Chennai,07-03-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1015,Vijay S,vijays@yahoo.com,9922334455,Machine Learning,True,Coimbatore,24-04-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1016,Pooja N,poojan@gmail.com,9090909090,Python,False,,16-02-2025,True,True,False,False,Needs Review,Missing required field; Invalid enrollment date
+STU1017,Dinesh R,dinesh.r@,8080808080,Data Science,True,Madurai,23-02-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1018,Saranya,saranya22@gmail.com,,Python,True,Chennai,11-02-2025,True,False,False,False,Needs Review,Missing required field; Invalid phone; Invalid enrollment date
+STU1019,Bala K,balak@gmail,7070707070,Machine Learning,False,Salem,12-06-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1020,Revathi M,revathim@yahoo.com,9191919191,Ml,True,Trichy,12-06-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1021,Muthu S,muthus@gmail.com,8282828282,Python,True,Chennai,24-02-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1022,Geetha,geetha@,9393939393,Data Science,False,Coimbatore,08-05-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1023,Prasanth J,prasanthj@gmail.com,7474747474,Python,True,Madurai,05-03-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1024,Divya P,divyap@yahoo.com,8585858585,Machine Learning,True,Chennai,10-06-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1025,Senthil K,senthilk@gmail,,Python,False,Trichy,15-05-2025,False,False,False,False,Needs Review,Missing required field; Invalid email; Invalid phone; Invalid enrollment date
+STU1026,Janaki R,janakir@gmail.com,9696969696,Data Science,True,Salem,02-05-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1027,Ramesh M,rameshm@,7878787878,Python,True,Chennai,01-03-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1028,Usha D,ushad@gmail.com,8989898989,Ml,False,Madurai,21-04-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1029,Gopal V,gopalv@yahoo,9010101010,Python,True,Coimbatore,12-01-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1030,Thenmozhi,thenmozhi@gmail.com,8121212121,Machine Learning,True,,13-04-2025,True,True,False,False,Needs Review,Missing required field; Invalid enrollment date
+STU1031,Arjun C,arjunc@gmail.com,7232323232,Python,False,Trichy,15-01-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1032,Swetha L,swethal@,,Data Science,True,Chennai,26-05-2025,False,False,False,False,Needs Review,Missing required field; Invalid email; Invalid phone; Invalid enrollment date
+STU1033,Naveen B,naveenb@gmail.com,9343434343,Python,True,Salem,23-06-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1034,Mala S,malas@yahoo.com,8454545454,Machine Learning,False,Chennai,21-03-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1035,Karthi P,karthip@gmail,7565656565,Python,True,Coimbatore,14-02-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1036,Suganya T,suganyt@gmail.com,9676767676,Data Science,True,Madurai,10-04-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1037,Venkat R,venkatr@,8787878787,Python,False,Trichy,12-02-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1038,Indira K,indirak@gmail.com,,Ml,True,Chennai,01-06-2025,True,False,False,False,Needs Review,Missing required field; Invalid phone; Invalid enrollment date
+STU1039,Mohan J,mohanj@yahoo.com,9898989898,Python,True,Salem,23-01-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1040,Dharani S,dharanis@gmail,7909090909,Data Science,False,,19-04-2025,False,True,False,False,Needs Review,Missing required field; Invalid email; Invalid enrollment date
+STU1041,Kishore M,kishorem@gmail.com,8010101010,Machine Learning,True,Chennai,21-02-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1042,Padma V,padmav@,9121212121,Python,True,Coimbatore,22-03-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1043,Balaji T,balajit@gmail.com,7232323232,Data Science,False,Madurai,17-03-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1044,Rekha N,rekhan@yahoo.com,,Python,True,Chennai,05-02-2025,True,False,False,False,Needs Review,Missing required field; Invalid phone; Invalid enrollment date
+STU1045,Selvam K,selvamk@gmail,8343434343,Machine Learning,True,Salem,28-02-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1046,Chitra R,chitrar@gmail.com,9454545454,Ml,False,Trichy,15-03-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1047,Ganesh P,ganeshp@,7565656565,Python,True,Chennai,27-06-2025,False,True,False,False,Needs Review,Invalid email; Invalid enrollment date
+STU1048,Latha S,lathas@gmail.com,8676767676,Data Science,True,Coimbatore,04-04-2025,True,True,False,False,Needs Review,Invalid enrollment date
+STU1049,Suresh B,sureshb@yahoo,,Python,False,Madurai,20-04-2025,False,False,False,False,Needs Review,Missing required field; Invalid email; Invalid phone; Invalid enrollment date
+STU1050,Ammu K,ammuk@gmail.com,9787878787,Machine Learning,True,Chennai,13-02-2025,True,True,False,False,Needs Review,Invalid enrollment date

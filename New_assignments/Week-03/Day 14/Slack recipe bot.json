@@ -1,0 +1,250 @@
+{
+  "name": "Slack recipe bot",
+  "nodes": [
+    {
+      "parameters": {
+        "trigger": [
+          "message"
+        ],
+        "channelId": {
+          "__rl": true,
+          "value": "C0CBV2X6ZPS",
+          "mode": "list",
+          "cachedResultName": "recipe-bot-new"
+        },
+        "options": {
+          "resolveIds": false
+        }
+      },
+      "type": "n8n-nodes-base.slackTrigger",
+      "typeVersion": 1,
+      "position": [
+        -512,
+        -32
+      ],
+      "id": "5c90ea27-53c2-4fa1-9b0e-9dc37e7ddeaa",
+      "name": "Slack Trigger",
+      "webhookId": "b0fe5d7c-4591-4868-bcc0-e5f248ddbf84",
+      "credentials": {
+        "slackApi": {
+          "id": "Vh6YhUFinkMZCrIo",
+          "name": "Slack account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "de5d317a-814f-4584-8a1f-fe003643aabe",
+              "name": "Recipe",
+              "value": "={{ $json.text}}",
+              "type": "string"
+            },
+            {
+              "id": "c9083cc0-399b-4951-a727-00a1ca9074fe",
+              "name": "channel",
+              "value": "={{ $json.channel }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -128,
+        -32
+      ],
+      "id": "9bd6c294-744e-4528-bda7-4fd163b50b3c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a helpful cooking assistant.\n\nRecipe requested: {{ $json.Recipe }}\n\nList all the ingredients needed to prepare this recipe for 2 people.\n\nInstructions:\n1. Provide a clear bulleted list of ingredients.\n2. Include approximate quantities for each ingredient.\n3. Keep the response short and practical.\n4. If the recipe name is empty, unclear, or not a recognizable dish, ask the user to provide a valid recipe name.\n5. Do not include cooking instructions.\n6. Format the response for a Slack message.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        16,
+        -32
+      ],
+      "id": "f2237f3b-530a-4bf3-ab95-83cf6ea60230",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        32,
+        112
+      ],
+      "id": "20062b0a-5554-4f14-bcea-c44c8eb36238",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "ZB0v1nYGdX4JKRHM",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0CBV2X6ZPS",
+          "mode": "id"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.7,
+      "position": [
+        288,
+        -32
+      ],
+      "id": "82bb5204-f24e-4ae6-ada7-3dd53ac5fffc",
+      "name": "Send a message",
+      "webhookId": "fb9072cd-603b-43c9-88f4-2ad8083f9d8e",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "uFLqrBokwkjMfhUW",
+          "name": "Slack account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "6cdd0e84-1a86-4c68-b698-dc99254d4a8e",
+              "leftValue": "={{ $json.bot_id ?? '' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "11c96ab2-75a3-491e-a7ce-0dffd4efd3fd",
+              "leftValue": "={{ $json.subtype ?? '' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -288,
+        -32
+      ],
+      "id": "570a5ac7-3adc-4df0-a0a7-3593542b08b1",
+      "name": "If"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Slack Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "0c90f838-afec-4e87-8469-848b5bebe123",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "10d137929bcbef557ea3f1b6695301067d3079397074d8e6c787efd18cdb60ec"
+  },
+  "nodeGroups": [],
+  "id": "42NuSFdmkvXS7zp0",
+  "tags": []
+}

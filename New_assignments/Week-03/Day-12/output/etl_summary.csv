@@ -1,0 +1,9 @@
+﻿Metric,Count
+Input Records,50
+Output Records,50
+Valid Records,0
+Needs Review,50
+Invalid Emails,21
+Invalid Phones,9
+Invalid Dates,50
+Duplicate Student IDs,0
