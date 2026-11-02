@@ -1,0 +1,89 @@
+﻿# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local databases
+vector_db/
+graph_db/
+
+# Local PDF documents
+data/
+
+# Model caches
+.cache/
+huggingface_cache/
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+temp/
+tmp/
+
+# Backup files
+*.bak
+*_backup.json
+PS C:\Users\manobaskar\Documents\Self\Social eagle_AI_BT12\Github_assignments\ragdemo_spotify> git add -n -- .
+add 'ragdemo_spotify/.dockerignore'
+add 'ragdemo_spotify/.gitignore'
+add 'ragdemo_spotify/Dockerfile'
+add 'ragdemo_spotify/app.py'
+add 'ragdemo_spotify/build_graph.py'
+add 'ragdemo_spotify/calibrate_vector.py'
+add 'ragdemo_spotify/diagnose_relationship.py'
+add 'ragdemo_spotify/diagnose_vector.py'
+add 'ragdemo_spotify/docker-compose.yml'
+add 'ragdemo_spotify/inspect_relationships.py'
+add 'ragdemo_spotify/pipelines/answer_generator.py'
+add 'ragdemo_spotify/pipelines/evidence_relevance.py'
+add 'ragdemo_spotify/pipelines/evidence_validator.py'
+add 'ragdemo_spotify/pipelines/graph_answer.py'
+add 'ragdemo_spotify/pipelines/graph_rag.py'
+add 'ragdemo_spotify/pipelines/graph_retriever.py'
+add 'ragdemo_spotify/pipelines/graph_visualizer.py'
+add 'ragdemo_spotify/pipelines/hybrid_rag.py'
+add 'ragdemo_spotify/pipelines/llm_decision.py'
+add 'ragdemo_spotify/pipelines/pdf_processor.py'
+add 'ragdemo_spotify/pipelines/vector_rag.py'
+add 'ragdemo_spotify/rebuild_graph.py'
+add 'ragdemo_spotify/requirements.txt'
+add 'ragdemo_spotify/test_answer.py'
+add 'ragdemo_spotify/test_decision.py'
+add 'ragdemo_spotify/test_final_routing.py'
+add 'ragdemo_spotify/test_graph.py'
+add 'ragdemo_spotify/test_graph_retrieval.py'
+add 'ragdemo_spotify/test_hybrid.py'
+add 'ragdemo_spotify/test_relationship_fix.py'
+add 'ragdemo_spotify/test_relevancy.py'
+PS C:\Users\manobaskar\Documents\Self\Social eagle_AI_BT12\Github_assignments\ragdemo_spotify> 
+
+@"
+
+# Exclude local diagnostic and experimental scripts
+calibrate_vector.py
+diagnose_*.py
+inspect_*.py
+test_*.py
+
+# Keep final regression test
+!test_final_routing.py
+"@ | Add-Content -Path .gitignore

@@ -1,0 +1,38 @@
+
+services:
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ollama_models:/root/.ollama
+    networks:
+      - rag_network
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - ollama
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      HF_HOME: /app/.cache/huggingface
+    volumes:
+      - ./data:/app/data:ro
+      - ./vector_db:/app/vector_db
+      - ./graph_db:/app/graph_db:ro
+      - huggingface_cache:/app/.cache/huggingface
+    networks:
+      - rag_network
+
+volumes:
+  ollama_models:
+  huggingface_cache:
+
+networks:
+  rag_network:
+    driver: bridge
