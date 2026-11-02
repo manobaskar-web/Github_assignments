@@ -1,0 +1,7 @@
+streamlit
+chromadb
+ollama
+sentence-transformers
+requests
+beautifulsoup4
+langchain-text-splitters
